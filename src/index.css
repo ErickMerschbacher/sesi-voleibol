@@ -1,0 +1,12 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}
+body{background:#0B0B0B;color:#F4F4F0;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+:focus-visible{outline:3px solid #E30613;outline-offset:3px}
+.outline-text{-webkit-text-stroke:2px #F4F4F0;color:transparent}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{animation:marq 28s linear infinite;width:max-content}
+@keyframes ball{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-30px,50px) rotate(180deg)}}
+.ball{animation:ball 6s ease-in-out infinite;transform-origin:200px 120px}
+@keyframes rise{from{transform:translateY(100%)}to{transform:none}}
+.rise{display:block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+@media (prefers-reduced-motion:reduce){.marq,.ball,.rise{animation:none}}
